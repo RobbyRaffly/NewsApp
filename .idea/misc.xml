@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_article.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_web_view.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/article_card.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/every_card.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_search.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/headlines_card.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_card.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/Robby AR/AndroidStudioProjects/NewsApp/app/src/main/res/menu/menu_item.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
