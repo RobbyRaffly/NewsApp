@@ -49,7 +49,7 @@ class ArticleActivity : AppCompatActivity() {
         }else if(url.equals("everything?domains=wsj.com")) {
             return ConfigRetrofit().getUser().getWSJ()
         }
-        return ConfigRetrofit().getUser().getArticle("everything","banana")
+        return ConfigRetrofit().getUser().getArticle("everything","")
     }
 
 

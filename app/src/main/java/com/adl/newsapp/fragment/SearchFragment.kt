@@ -46,7 +46,7 @@ class SearchFragment : Fragment() {
     }
 
     fun Search(){
-        ConfigRetrofit().getUser().Search(txtSearch.text.toString(),"2022-07-02","2022-07-02","popularity")?.enqueue(object :
+        ConfigRetrofit().getUser().Search(txtSearch.text.toString(),"2022-07-02","2022-07-02","popularity").enqueue(object :
             Callback<ResponseArticles> {
             override fun onResponse(
                 call: Call<ResponseArticles>,
@@ -58,7 +58,7 @@ class SearchFragment : Fragment() {
                     .show()
 
                 Log.d("sukses", data.toString())
-
+                lstSearch.clear()
                 for (isi in data?.articles.orEmpty()) {
                     lstSearch.add(
                         ArticlesItem(
