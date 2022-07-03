@@ -7,15 +7,14 @@ import com.adl.newsapp.WebViewActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.article_card.view.*
-import kotlinx.android.synthetic.main.headlines_card.view.*
-import kotlinx.android.synthetic.main.news_card.view.*
 
-class NewsViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class SearchViewHolder (view: View): RecyclerView.ViewHolder(view){
     val title = view.titleArticle
     val image = view.ArticleImg
     val navigasi = view.arcticleCard
 
-    fun bindData(adapter: NewsAdapter, position:Int){
+
+    fun bindData(adapter: SearchAdapter, position:Int) {
         title.setText(adapter.data.get(position)?.title.toString())
         image?.let {
             Glide.with(adapter.parent.context)
@@ -25,10 +24,12 @@ class NewsViewHolder(view: View): RecyclerView.ViewHolder(view) {
                 .load(adapter.data.get(position).urlToImage)
                 .into(it)
         }
-        navigasi.setOnClickListener{
+
+        navigasi.setOnClickListener {
             val intent = Intent(adapter.parent.context, WebViewActivity::class.java)
-            intent.putExtra("data",adapter.data.get(position))
+            intent.putExtra("data", adapter.data.get(position))
             adapter.parent.context.startActivity(intent)
+
         }
     }
 }

@@ -9,8 +9,8 @@ import retrofit2.http.*
 interface InterfaceUser {
 
     @Headers("x-api-key:975b651e722640579883da60120b54fc")
-    @GET("v2/everything?q=apple&from=2022-06-30&to=2022-06-30&sortBy=popularity")
-    fun Search(): Call<ResponseArticles>
+    @GET("v2/everything")
+    fun Search(@Query("q")q:String,@Query("from")from:String,@Query("to")to:String,@Query("sortBy")sortBy:String): Call<ResponseArticles>
 
     @Headers("x-api-key:975b651e722640579883da60120b54fc")
     @GET("v2/{key}")
@@ -36,27 +36,5 @@ interface InterfaceUser {
     @Headers("x-api-key:975b651e722640579883da60120b54fc")
     @GET("v2/everything?domains=wsj.com&apiKey=975b651e722640579883da60120b54fc")
     fun getWSJ(): Call<ResponseArticles>
-
-//    @Headers("x-api-key:975b651e722640579883da60120b54fc")
-//    @GET("api/absen/all")
-//    fun getDataAbsen(@Query("limit")limit:String, @Query("sort_order")sort_order:String): Call<ResponseGetAbsen>
-//
-//
-//    @Multipart
-//    @Headers("X-Api-Key:975b651e722640579883da60120b54fc")
-//    @POST("api/absen/add")
-//    fun addDataAndImage(@Part file: MultipartBody.Part, @Part("username") username: RequestBody,
-//                        @Part("tanggal_masuk")tanggal_masuk: RequestBody, @Part("tanggal_keluar")tanggal_keluar: RequestBody,
-//                        @Part("lokasi_GPS")lokasi_GPS: RequestBody
-//    ): Call<ResponseAddData>
-//
-//    @Multipart
-//    @Headers("X-Api-Key:975b651e722640579883da60120b54fc")
-//    @POST("api/absen/update")
-//    fun updateDataAndImage(@Part("id") id: RequestBody, @Part file: MultipartBody.Part, @Part("username") username: RequestBody,
-//                           @Part("tanggal_masuk")tanggal_masuk: RequestBody, @Part("tanggal_keluar")tanggal_keluar: RequestBody,
-//                           @Part("lokasi_GPS")lokasi_GPS: RequestBody
-//    ): Call<ResponseCheckOut>
-
 
 }
