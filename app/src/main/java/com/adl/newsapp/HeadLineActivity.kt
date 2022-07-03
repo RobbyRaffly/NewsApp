@@ -37,15 +37,15 @@ class HeadLineActivity : AppCompatActivity() {
     }
 
     fun getRetrofit(url:String): Call<ResponseArticles> {
-        if (url.equals("everything?q=apple&from=2022-07-02&to=2022-07-02&sortBy=popularity&apiKey=975b651e722640579883da60120b54fc")) {
+        if (url.equals("everything?q=apple&from=2022-07-02&to=2022-07-02&sortBy=popularity")) {
             return ConfigRetrofit().getUser().getApples()
-        }else if(url.equals("everything?q=tesla&from=2022-06-03&sortBy=publishedAt&apiKey=975b651e722640579883da60120b54fc")) {
+        }else if(url.equals("everything?q=tesla&from=2022-06-03&sortBy=publishedAt")) {
             return ConfigRetrofit().getUser().getTeslas()
-        }else if(url.equals("top-headlines?country=us&category=business&apiKey=975b651e722640579883da60120b54fc")) {
+        }else if(url.equals("top-headlines?country=us&category=business")) {
             return ConfigRetrofit().getUser().getTopBusiness()
-        }else if(url.equals("top-headlines?sources=techcrunch&apiKey=975b651e722640579883da60120b54fc")) {
+        }else if(url.equals("top-headlines?sources=techcrunch")) {
             return ConfigRetrofit().getUser().getTopTechCrunch()
-        }else if(url.equals("everything?domains=wsj.com&apiKey=975b651e722640579883da60120b54fc")) {
+        }else if(url.equals("everything?domains=wsj.com")) {
             return ConfigRetrofit().getUser().getWSJ()
         }
         return ConfigRetrofit().getUser().getArticle("everything","banana")

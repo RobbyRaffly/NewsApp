@@ -40,11 +40,11 @@ class HomeFragment : Fragment() {
     fun getList(){
         lstHeadlines.clear()
         lstevery.clear()
-        lstHeadlines.add(headModel("Top business headlines in the US right now","top-headlines?country=us&category=business&apiKey=975b651e722640579883da60120b54fc"))
-        lstHeadlines.add(headModel("Top headlines from TechCrunch right now","top-headlines?sources=techcrunch&apiKey=975b651e722640579883da60120b54fc"))
-        lstevery.add(everyModel("All articles mentioning Apple from yesterday, sorted by popular publishers first","everything?q=apple&from=2022-07-02&to=2022-07-02&sortBy=popularity&apiKey=975b651e722640579883da60120b54fc"))
-        lstevery.add(everyModel("All articles about Tesla from the last month, sorted by recent first","everything?q=tesla&from=2022-06-03&sortBy=publishedAt&apiKey=975b651e722640579883da60120b54fc"))
-        lstevery.add(everyModel("All articles published by the Wall Street Journal in the last 6 months, sorted by recent first","everything?domains=wsj.com&apiKey=975b651e722640579883da60120b54fc"))
+        lstHeadlines.add(headModel("Top business headlines in the US right now","top-headlines?country=us&category=business"))
+        lstHeadlines.add(headModel("Top headlines from TechCrunch right now","top-headlines?sources=techcrunch"))
+        lstevery.add(everyModel("All articles mentioning Apple from yesterday, sorted by popular publishers first","everything?q=apple&from=2022-07-02&to=2022-07-02&sortBy=popularity"))
+        lstevery.add(everyModel("All articles about Tesla from the last month, sorted by recent first","everything?q=tesla&from=2022-06-03&sortBy=publishedAt"))
+        lstevery.add(everyModel("All articles published by the Wall Street Journal in the last 6 months, sorted by recent first","everything?domains=wsj.com"))
 
         headAdapter.notifyDataSetChanged()
         evAdapter.notifyDataSetChanged()
